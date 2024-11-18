@@ -1,16 +1,26 @@
 import React from "react";
+import { Draggable } from "react-beautiful-dnd";
 
-const TaskCard = ({ task }) => (
-  <div className="card bg-base-100 shadow-md">
-    <div className="card-body">
-      <h2 className="card-title">{task.title}</h2>
-      <p>{task.description}</p>
-      <div className="badge badge-outline">{task.tag}</div>
-      <div className="text-sm text-gray-500 mt-2">
-        {task.startDate} - {task.endDate}
+const TaskCard = ({ task, index }) => (
+  <Draggable draggableId={task.id} index={index}>
+    {(provided) => (
+      <div
+        className="card bg-base-100 shadow-md"
+        ref={provided.innerRef}
+        {...provided.draggableProps}
+        {...provided.dragHandleProps}
+      >
+        <div className="card-body">
+          <h2 className="card-title">{task.title}</h2>
+          <p>{task.description}</p>
+          <div className="badge badge-outline">{task.tag}</div>
+          <div className="text-sm text-gray-500 mt-2">
+            {task.startDate} - {task.endDate}
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    )}
+  </Draggable>
 );
 
 export default TaskCard;
