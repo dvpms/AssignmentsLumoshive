@@ -1,0 +1,57 @@
+{
+  "columns": [
+    {
+      "id": "todo",
+      "title": "Backlog",
+      "tasks": []
+    },
+    {
+      "id": "inProgress",
+      "title": "On Progress",
+      "tasks": []
+    },
+    {
+      "id": "done",
+      "title": "Done",
+      "tasks": []
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Sample Task 1",
+      "description": "This is a sample task",
+      "tag": "Development",
+      "startDate": "2024-11-18",
+      "endDate": "2024-11-25",
+      "columnId": "todo"
+    },
+    {
+      "id": "b9b5",
+      "title": "asdfa",
+      "description": "sfasdf",
+      "startDate": "2024-11-02",
+      "endDate": "2024-11-22",
+      "tag": "Testing",
+      "columnId": "todo"
+    },
+    {
+      "id": "f0e2",
+      "title": "Halo",
+      "description": "asdfasdfa",
+      "startDate": "2024-11-01",
+      "endDate": "2024-11-08",
+      "tag": "Design",
+      "columnId": "todo"
+    },
+    {
+      "id": "d1c4",
+      "title": "Halo2",
+      "description": "asdfasdf",
+      "startDate": "2024-11-01",
+      "endDate": "2024-11-30",
+      "tag": "Testing",
+      "columnId": "todo"
+    }
+  ]
+}
