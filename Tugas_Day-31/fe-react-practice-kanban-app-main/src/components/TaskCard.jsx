@@ -1,11 +1,12 @@
 import React from "react";
 import { Draggable } from "react-beautiful-dnd";
+import PropTypes from "prop-types";
 
 const TaskCard = ({ task, index }) => (
   <Draggable draggableId={task.id} index={index}>
     {(provided) => (
       <div
-        className="card bg-base-100 shadow-md"
+        className="card bg-white shadow-md"
         ref={provided.innerRef}
         {...provided.draggableProps}
         {...provided.dragHandleProps}
@@ -23,4 +24,8 @@ const TaskCard = ({ task, index }) => (
   </Draggable>
 );
 
+TaskCard.propTypes = {
+  task: PropTypes.object.isRequired,
+  index: PropTypes.number.isRequired,
+};
 export default TaskCard;

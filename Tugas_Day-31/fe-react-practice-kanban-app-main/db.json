@@ -24,7 +24,7 @@
       "tag": "Development",
       "startDate": "2024-11-18",
       "endDate": "2024-11-25",
-      "columnId": "todo"
+      "columnId": "done"
     },
     {
       "id": "b9b5",
@@ -33,25 +33,25 @@
       "tag": "Development",
       "startDate": "2024-11-18",
       "endDate": "2024-11-25",
-      "columnId": "inProgress"
-    },
-    {
-      "id": "f0e2",
-      "title": "asdfa",
-      "description": "sfasdf",
-      "startDate": "2024-11-02",
-      "endDate": "2024-11-22",
-      "tag": "Testing",
       "columnId": "todo"
     },
     {
-      "id": "d1c4",
-      "title": "asdfa",
-      "description": "sfasdf",
-      "startDate": "2024-11-02",
-      "endDate": "2024-11-22",
-      "tag": "Testing",
+      "id": "f0e2",
+      "title": "Sample Task 1",
+      "description": "This is a sample task",
+      "tag": "Development",
+      "startDate": "2024-11-18",
+      "endDate": "2024-11-25",
       "columnId": "inProgress"
+    },
+    {
+      "id": "d1c4",
+      "title": "Sample Task 1",
+      "description": "This is a sample task",
+      "tag": "Development",
+      "startDate": "2024-11-18",
+      "endDate": "2024-11-25",
+      "columnId": "todo"
     }
   ]
 }

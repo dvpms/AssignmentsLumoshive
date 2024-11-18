@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Navbar = ({handleAddTask}) => (
   <div className="navbar bg-base-100 shadow-lg">
@@ -10,5 +11,9 @@ const Navbar = ({handleAddTask}) => (
     </div>
   </div>
 );
+
+Navbar.propTypes = {
+  handleAddTask: PropTypes.func.isRequired,
+};
 
 export default Navbar;

@@ -26,7 +26,7 @@ const App = () => {
 
   const handleSaveTask = async (task) => {
     try {
-      const response = await postData(task);
+      await postData(task);
       fetchData();
     } catch (error) {
       console.error(error);
@@ -89,5 +89,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;
