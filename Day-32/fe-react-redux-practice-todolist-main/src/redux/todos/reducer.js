@@ -1,4 +1,10 @@
-import { ADD_TODO, DELETE_TODO, COMPLETED_TODO } from "./actions";
+import {
+  ADD_TODO,
+  DELETE_TODO,
+  COMPLETED_TODO,
+  UPDATE_TODO_TEXT,
+  GET_TODO,
+} from "./actions";
 
 const initialState = {
   todos: [
@@ -6,6 +12,8 @@ const initialState = {
     { id: 2, text: "Build a To-Do List", completed: false },
     { id: 3, text: "Celebrate", completed: false },
   ],
+
+  todo: [],
 };
 
 const todoReducer = (state = initialState, action) => {
@@ -29,6 +37,22 @@ const todoReducer = (state = initialState, action) => {
             : todo
         ),
       };
+    case GET_TODO:
+      return {
+        ...state,
+        todo: state.todos.find((todo) => todo.id === action.payload) || null,
+      };
+
+    case UPDATE_TODO_TEXT:
+      return {
+        ...state,
+        todos: state.todos.map((todo) =>
+          todo.id === action.payload.id
+            ? { ...todo, text: action.payload.text }
+            : todo
+        ),
+      };
+
     default:
       return state;
   }
