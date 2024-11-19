@@ -4,6 +4,7 @@ import {
   COMPLETED_TODO,
   UPDATE_TODO_TEXT,
   GET_TODO,
+  CHANGE_THEME,
 } from "./actions";
 
 const initialState = {
@@ -14,6 +15,7 @@ const initialState = {
   ],
 
   todo: [],
+  theme: "light",
 };
 
 const todoReducer = (state = initialState, action) => {
@@ -51,6 +53,11 @@ const todoReducer = (state = initialState, action) => {
             ? { ...todo, text: action.payload.text }
             : todo
         ),
+      };
+    case CHANGE_THEME:
+      return {
+        ...state,
+        theme: action.payload,
       };
 
     default:

@@ -3,6 +3,7 @@ const DELETE_TODO = "DELETE_TODO";
 const COMPLETED_TODO = "COMPLETED_TODO";
 const UPDATE_TODO_TEXT = "UPDATE_TODO_TEXT";
 const GET_TODO = "GET_TODO";
+const CHANGE_THEME = "CHANGE_THEME";
 
 const addTodo = (todo) => ({ type: ADD_TODO, payload: todo });
 const deleteTodo = (id) => ({ type: DELETE_TODO, payload: id });
@@ -19,9 +20,10 @@ export {
   COMPLETED_TODO,
   UPDATE_TODO_TEXT,
   GET_TODO,
+  CHANGE_THEME,
   addTodo,
   deleteTodo,
   completedTodo,
   updateTodoText,
-  getTodo
+  getTodo,
 };
