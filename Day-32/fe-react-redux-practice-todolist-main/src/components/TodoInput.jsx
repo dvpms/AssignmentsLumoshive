@@ -1,26 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo, updateTodoText } from "../redux/todos/actions";
+import { updateTodo, addTodo } from "../redux/async/todo/actions";
+import { v4 as uuidv4 } from "uuid";
 import { useSelector } from "react-redux";
 
 const TodoInput = () => {
   const [text, setText] = useState("");
   const lang = useSelector((state) => state.lang.lang);
-  const todo = useSelector((state) => state.todo.todo);
+  const { todo, isUpdate } = useSelector((state) => state.todos);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setText(todo.text);
-  }, [todo]);
+    if (isUpdate) {
+      setText(todo.text || "");
+    }
+  }, [todo, isUpdate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (todo) {
-      // Update todo jika sedang dalam mode edit
-      dispatch(updateTodoText(todo.id, text));
+    if (isUpdate) {
+      dispatch(updateTodo(todo.id, text));
     } else {
-      // Tambahkan todo baru
-      dispatch(addTodo({ id: Date.now(), text, completed: false }));
+      dispatch(addTodo({ id: uuidv4(), text, completed: false }));
     }
     setText("");
   };
@@ -33,10 +34,10 @@ const TodoInput = () => {
           className="form-control"
           placeholder={
             lang === "EN"
-              ? todo
+              ? isUpdate
                 ? "Update task..."
                 : "Add a new task..."
-              : todo
+              : isUpdate
               ? "Perbarui tugas..."
               : "Tambahkan tugas baru..."
           }
@@ -45,18 +46,11 @@ const TodoInput = () => {
           required
         />
         <button className="btn btn-primary">
-          {lang === "EN"
-            ? todo
-              ? "Update"
-              : "Add"
-            : todo
-            ? "Perbarui"
-            : "Tambah"}
+          {lang === "EN" ? (isUpdate ? "Update" : "Add") : isUpdate ? "Perbarui" : "Tambah"}
         </button>
       </form>
     </div>
   );
 };
-
 export default TodoInput;
 

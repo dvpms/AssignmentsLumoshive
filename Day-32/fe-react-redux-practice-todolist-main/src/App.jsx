@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
 import { CHANGE_LANG } from "./redux/lang/actions";
-import { CHANGE_THEME } from "./redux/todos/actions";
+import { CHANGE_THEME } from "./redux/theme/actions";
 
 const App = () => {
   const lang = useSelector((state) => state.lang.lang);

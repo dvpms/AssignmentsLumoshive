@@ -1,15 +1,25 @@
-import { legacy_createStore as createStore, combineReducers } from "redux";
+import { legacy_createStore as createStore, combineReducers, applyMiddleware } from "redux";
 import { composeWithDevTools } from "@redux-devtools/extension";
-import todoReducer from "./todos/reducer";
+import {thunk} from "redux-thunk";
+import todosDataReducer from "./async/todo/reducer";
 import langReducer from "./lang/reducer";
 import themeReducer from "./theme/reducer";
 
 const rootReducer = combineReducers({
-  todo: todoReducer,
+  todos: todosDataReducer,
   lang: langReducer,
   theme: themeReducer,
 });
 
-const store = createStore(rootReducer, composeWithDevTools());
+// eslint-disable-next-line no-unused-vars
+const logMiddleware = store => next => action => {
+  console.log("action", action);
+  next(action);
+};
+
+const store = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(thunk, logMiddleware))
+);
 
 export default store;

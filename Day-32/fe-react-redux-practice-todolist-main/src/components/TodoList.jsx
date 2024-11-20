@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteTodo, completedTodo, getTodo } from "../redux/todos/actions";
+import { completedTodo } from "../redux/todos/actions";
+import { fetchTodos, deleteTodo, getTodo } from "../redux/async/todo/actions";
 
 const TodoList = () => {
-  const todos = useSelector((state) => state.todo.todos);
+  const { todo, todos, loading, error, isSuccess } = useSelector(
+    (state) => state.todos
+  );
+  console.log(todo);
   const lang = useSelector((state) => state.lang.lang);
   const dispatch = useDispatch();
+  console.log(todos);
+
+  useEffect(() => {
+    dispatch(fetchTodos());
+  }, [dispatch]);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+  if (error) {
+    return <p>{error}</p>;
+  }
+  if (todos.length === 0) {
+    return <p>No todos found.</p>;
+  }
 
   return (
     <ul className="list-group">

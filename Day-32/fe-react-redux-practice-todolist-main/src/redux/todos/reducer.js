@@ -4,16 +4,9 @@ import {
   COMPLETED_TODO,
   UPDATE_TODO_TEXT,
   GET_TODO,
-  CHANGE_THEME,
 } from "./actions";
 
 const initialState = {
-  todos: [
-    { id: 1, text: "Learn React", completed: false },
-    { id: 2, text: "Build a To-Do List", completed: false },
-    { id: 3, text: "Celebrate", completed: false },
-  ],
-
   todo: [],
   theme: "light",
 };
@@ -39,11 +32,7 @@ const todoReducer = (state = initialState, action) => {
             : todo
         ),
       };
-    case GET_TODO:
-      return {
-        ...state,
-        todo: state.todos.find((todo) => todo.id === action.payload) || null,
-      };
+
 
     case UPDATE_TODO_TEXT:
       return {
@@ -54,12 +43,6 @@ const todoReducer = (state = initialState, action) => {
             : todo
         ),
       };
-    case CHANGE_THEME:
-      return {
-        ...state,
-        theme: action.payload,
-      };
-
     default:
       return state;
   }
