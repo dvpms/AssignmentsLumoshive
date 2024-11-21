@@ -1,16 +1,23 @@
 {
   "todos": [
     {
-      "text": "asdfasdfasdf",
-      "id": "e362a0ee-2d59-4268-8d5c-61fa59ef014d"
-    },
-    {
-      "text": "asdfa12121",
-      "id": "6d68ba68-d018-4533-a630-897b08cab48e"
-    },
-    {
       "id": "79c8a71c-345f-4ec1-a4b3-d3cb26c20c58",
       "text": "asdfafds",
+      "completed": true
+    },
+    {
+      "id": "7a4f5c1f-4b4e-4ac1-80a4-6a1e9a8a4a14",
+      "text": "belajar react",
+      "completed": false
+    },
+    {
+      "id": "8a4f5c1f-4b4e-4ac1-80a4-6a1e9a8a4a15",
+      "text": "belajar redux",
+      "completed": false
+    },
+    {
+      "id": "623cfaf8-9d01-4892-9c3f-68d96f7411aa",
+      "text": "asfasdfa",
       "completed": false
     }
   ]
