@@ -1,33 +1,16 @@
 {
   "todos": [
     {
-      "id": "1",
-      "text": "Membuat Action & Reducer",
-      "completed": false
+      "text": "asdfasdfasdf",
+      "id": "e362a0ee-2d59-4268-8d5c-61fa59ef014d"
     },
     {
-      "id": "2",
-      "text": "Membuat Komponen",
-      "completed": false
+      "text": "asdfa12121",
+      "id": "6d68ba68-d018-4533-a630-897b08cab48e"
     },
     {
-      "id": "3",
-      "text": "Membuat Store",
-      "completed": false
-    },
-    {
-      "id": "4",
-      "text": "Membuat Connect",
-      "completed": false
-    },
-    {
-      "id": "5",
-      "text": "Membuat Action & Reducer",
-      "completed": false
-    },
-    {
-      "id": "c296056c-ec42-40b5-8daf-edff56018d59",
-      "text": "asdfasf",
+      "id": "79c8a71c-345f-4ec1-a4b3-d3cb26c20c58",
+      "text": "asdfafds",
       "completed": false
     }
   ]

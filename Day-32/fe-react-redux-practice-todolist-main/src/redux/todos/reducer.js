@@ -3,7 +3,6 @@ import {
   DELETE_TODO,
   COMPLETED_TODO,
   UPDATE_TODO_TEXT,
-  GET_TODO,
 } from "./actions";
 
 const initialState = {

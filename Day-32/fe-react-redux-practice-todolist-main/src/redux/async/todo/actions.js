@@ -27,6 +27,7 @@ const deleteTodo = (id) => {
     try {
       await axios.delete(`http://localhost:3000/todos/${id}`);
       dispatch({ type: PROCESS_TODO_SUCCESS });
+      dispatch(fetchTodos())
     } catch (error) {
       dispatch({ type: FETCH_TODO_FAILURE, payload: error.message });
     }
@@ -38,6 +39,7 @@ const addTodo = (data) => {
     try {
       await axios.post(`http://localhost:3000/todos/`, data);
       dispatch({ type: PROCESS_TODO_SUCCESS });
+      dispatch(fetchTodos())
     } catch (error) {
       dispatch({ type: FETCH_TODO_FAILURE, payload: error.message });
     }
@@ -53,13 +55,26 @@ const getTodo = (id) => {
     dispatch({ type: GET_TODO, payload: data });
   };
 };
-
+const completedTodo = (todo) => {
+  return async (dispatch) => {
+    dispatch({ type: FETCH_TODO_REQUEST });
+    try {
+      const todoComplete = {...todo, completed: !todo.completed}
+      await axios.put(`http://localhost:3000/todos/${todo.id}`, todoComplete);
+      dispatch({ type: PROCESS_TODO_SUCCESS });
+      dispatch(fetchTodos())
+    } catch (error) {
+      dispatch({ type: FETCH_TODO_FAILURE, payload: error.message });
+    }
+  };
+};
 const updateTodo = (id, data) => {
   return async (dispatch) => {
     dispatch({ type: FETCH_TODO_REQUEST });
     try {
       await axios.put(`http://localhost:3000/todos/${id}`, { text: data });
       dispatch({ type: UPDATE_SUCCESS });
+      dispatch(fetchTodos())
     } catch (error) {
       dispatch({ type: FETCH_TODO_FAILURE, payload: error.message });
     }
@@ -78,4 +93,5 @@ export {
   deleteTodo,
   addTodo,
   updateTodo,
+  completedTodo,
 };

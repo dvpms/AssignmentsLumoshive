@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { completedTodo } from "../redux/todos/actions";
-import { fetchTodos, deleteTodo, getTodo } from "../redux/async/todo/actions";
+// import { completedTodo } from "../redux/todos/actions";
+import { fetchTodos, deleteTodo, getTodo, completedTodo } from "../redux/async/todo/actions";
 
 const TodoList = () => {
-  const { todo, todos, loading, error, isSuccess } = useSelector(
+  const { todo, todos, loading, error } = useSelector(
     (state) => state.todos
   );
   console.log(todo);
@@ -14,7 +14,7 @@ const TodoList = () => {
 
   useEffect(() => {
     dispatch(fetchTodos());
-  }, [dispatch]);
+  },[dispatch]);
 
   if (loading) {
     return <p>Loading...</p>;
@@ -46,7 +46,7 @@ const TodoList = () => {
           <div className="flex">
             <button
               className="btn btn-primary btn-sm me-3"
-              onClick={() => dispatch(completedTodo(todo.id))}
+              onClick={() => dispatch(completedTodo(todo))}
             >
               {lang === "EN" ? "Completed" : "Selesai"}
             </button>
