@@ -24,7 +24,7 @@
       "tag": "Development",
       "startDate": "2024-11-18",
       "endDate": "2024-11-25",
-      "columnId": "done"
+      "columnId": "inProgress"
     },
     {
       "id": "b9b5",
@@ -33,7 +33,7 @@
       "tag": "Development",
       "startDate": "2024-11-18",
       "endDate": "2024-11-25",
-      "columnId": "todo"
+      "columnId": "done"
     },
     {
       "id": "f0e2",
@@ -42,7 +42,7 @@
       "tag": "Development",
       "startDate": "2024-11-18",
       "endDate": "2024-11-25",
-      "columnId": "inProgress"
+      "columnId": "todo"
     },
     {
       "id": "d1c4",
