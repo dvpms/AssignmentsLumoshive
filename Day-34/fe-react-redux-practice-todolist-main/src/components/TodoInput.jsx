@@ -7,8 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 const TodoInput = () => {
   const dispatch = useDispatch();
   const [text, setText] = useState("");
-  const {lang} = useSelector((state) =>state.lang)
-  const { todo, isUpdate, loading } = useSelector((state) => state.todos);
+  const { todo, isUpdate, loading, lang } = useSelector((state) => state.todos);
 
   useEffect(() => {
     if (todo?.id) {

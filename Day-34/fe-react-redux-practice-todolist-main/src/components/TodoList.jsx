@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchTodos } from "../redux/async/todosSlice";
 import { deleteTodo, currentTodo } from "../redux/async/todosSlice";
 import { completedTodo } from "../redux/slices/todosSlice";
 
 const TodoList = () => {
-  const { lang } = useSelector((state) => state.lang);
-  const {todos, loading, error, isSuccess} = useSelector((state) => state.todos);
+  const {todos, loading, error, isSuccess, lang} = useSelector((state) => state.todos);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -18,7 +17,7 @@ const TodoList = () => {
     if (isSuccess) {
       dispatch(fetchTodos());
     }
-  }, [isSuccess]);
+  }, [dispatch, isSuccess]);
   
   if (loading) {
     return <div>Loading...</div>;

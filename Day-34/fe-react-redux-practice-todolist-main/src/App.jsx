@@ -1,7 +1,7 @@
 import React from "react";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
-import { changeLang } from "./redux/slices/todosSlice";
+import { changeLang } from "./redux/async/todosSlice";
 import {useSelector, useDispatch} from "react-redux";
 
 const App = () => {

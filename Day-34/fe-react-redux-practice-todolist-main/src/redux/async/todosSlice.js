@@ -35,12 +35,17 @@ const initialState = {
   loading: false,
   error: null,
   isSuccess: false,
+  lang: "EN",
 };
 
 const todosSlice = createSlice({
   name: "todos",
   initialState,
-  reducers: {},
+  reducers: {
+    changeLang: (state, action) => {
+        state.lang = action.payload;
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchTodos.pending, (state) => {
@@ -118,5 +123,5 @@ const todosSlice = createSlice({
       });
   },
 });
-
+export const {changeLang} = todosSlice.actions;
 export default todosSlice.reducer;
