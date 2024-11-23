@@ -1,0 +1,83 @@
+{
+  "products": [
+    {
+      "id": "1234567890",
+      "name": "Product Name 3",
+      "description": "Description of the product 3",
+      "price": 200000,
+      "stock": 10
+    },
+    {
+      "id": "8994016006632",
+      "name": "Roasted Peanut",
+      "description": "asdf",
+      "price": 10000,
+      "stock": 2201
+    },
+    {
+      "id": "9786029193671",
+      "name": "Buku Filsafat",
+      "description": "Buku tentang filsafat",
+      "price": 100000,
+      "stock": 10
+    }
+  ],
+  "logs": [
+    {
+      "id": "1",
+      "product_id": "8992745120650",
+      "type": "stock_in",
+      "quantity": 10,
+      "note": "Restocked due to high demand",
+      "date": "2024-11-22T10:00:00Z"
+    },
+    {
+      "id": "32d7",
+      "product_id": "8992745120650",
+      "type": "stock_out",
+      "quantity": 20,
+      "note": "Restocking warehouse",
+      "date": "2024-11-22T14:00:00Z"
+    },
+    {
+      "id": "54d4",
+      "product_id": "8994016006632",
+      "type": "stock_in",
+      "quantity": "300",
+      "note": "",
+      "date": "2024-11-23T14:19:42.653Z"
+    },
+    {
+      "id": "019b",
+      "product_id": "8994016006632",
+      "type": "stock_out",
+      "quantity": 301,
+      "note": "Sold to Hypermart",
+      "date": "2024-11-23T14:48:01.111Z"
+    },
+    {
+      "id": "a0d3",
+      "product_id": "8994016006632",
+      "type": "stock_in",
+      "quantity": 2002,
+      "note": "Supply from hypermart",
+      "date": "2024-11-23T15:06:27.216Z"
+    },
+    {
+      "id": "c265",
+      "product_id": "9786029193671",
+      "type": "stock_in",
+      "quantity": 19,
+      "note": "Suply from Gramedia",
+      "date": "2024-11-23T16:49:29.177Z"
+    },
+    {
+      "id": "8dba",
+      "product_id": "9786029193671",
+      "type": "stock_out",
+      "quantity": 10,
+      "note": "Send for Gramedia",
+      "date": "2024-11-23T16:52:26.591Z"
+    }
+  ]
+}

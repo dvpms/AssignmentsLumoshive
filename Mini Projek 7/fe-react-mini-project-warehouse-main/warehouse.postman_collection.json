@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "dd43fd39-0f31-4fae-b387-98a3fc9cd201",
+		"name": "warehouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37511972"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTczMjIwNDMwMTAxNywiZW1haWwiOiJkZW5pQGdtYWlsLmNvbSIsImlhdCI6MTczMjIwNDUwNywiZXhwIjoxNzMyMjA4MTA3fQ.9vIgwg9eXALq07xX4tAzLkDM7aHCrbzlgnejLIRUEb0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/products",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTczMjIwNDMwMTAxNywiZW1haWwiOiJkZW5pQGdtYWlsLmNvbSIsImlhdCI6MTczMjIwNDUwNywiZXhwIjoxNzMyMjA4MTA3fQ.9vIgwg9eXALq07xX4tAzLkDM7aHCrbzlgnejLIRUEb0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/products/8992745120650",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"products",
+								"8992745120650"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTczMjIwNDMwMTAxNywiZW1haWwiOiJkZW5pQGdtYWlsLmNvbSIsImlhdCI6MTczMjIwNDUwNywiZXhwIjoxNzMyMjA4MTA3fQ.9vIgwg9eXALq07xX4tAzLkDM7aHCrbzlgnejLIRUEb0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/products/34343ee6-a06c-4cde-97ae-613b86fdcb54",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"products",
+								"34343ee6-a06c-4cde-97ae-613b86fdcb54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTczMjIwNDMwMTAxNywiZW1haWwiOiJkZW5pQGdtYWlsLmNvbSIsImlhdCI6MTczMjIwNDUwNywiZXhwIjoxNzMyMjA4MTA3fQ.9vIgwg9eXALq07xX4tAzLkDM7aHCrbzlgnejLIRUEb0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"213123123\",\r\n    \"name\": \"Product Name\",\r\n    \"description\": \"Description of the product\",\r\n    \"price\": 1000000,\r\n    \"stock\": 20,\r\n    \"logs\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCAL}}/products",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTczMjIwNDMwMTAxNywiZW1haWwiOiJkZW5pQGdtYWlsLmNvbSIsImlhdCI6MTczMjIwNDUwNywiZXhwIjoxNzMyMjA4MTA3fQ.9vIgwg9eXALq07xX4tAzLkDM7aHCrbzlgnejLIRUEb0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Product Name\",\r\n    \"description\": \"Description of the product\",\r\n    \"price\": 1000000,\r\n    \"stock\": 20,\r\n    \"logs\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCAL}}/products/213123123",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"products",
+								"213123123"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "stock",
+			"item": [
+				{
+					"name": "stock in",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTczMjIwNDMwMTAxNywiZW1haWwiOiJkZW5pQGdtYWlsLmNvbSIsImlhdCI6MTczMjIwNDUwNywiZXhwIjoxNzMyMjA4MTA3fQ.9vIgwg9eXALq07xX4tAzLkDM7aHCrbzlgnejLIRUEb0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"stock\": 110\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCAL}}/products/8992745120650",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"products",
+								"8992745120650"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stock out",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTczMjIwNDMwMTAxNywiZW1haWwiOiJkZW5pQGdtYWlsLmNvbSIsImlhdCI6MTczMjIwNDUwNywiZXhwIjoxNzMyMjA4MTA3fQ.9vIgwg9eXALq07xX4tAzLkDM7aHCrbzlgnejLIRUEb0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"stock\": 110\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCAL}}/products/8992745120650",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"products",
+								"8992745120650"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "log",
+			"item": [
+				{
+					"name": "get log",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/logs?product_id=8992745120650&type=stock_out",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"logs"
+							],
+							"query": [
+								{
+									"key": "product_id",
+									"value": "8992745120650"
+								},
+								{
+									"key": "type",
+									"value": "stock_out"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create log",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"product_id\": \"8992745120650\",\r\n  \"type\": \"stock_out\",\r\n  \"quantity\": 20,\r\n  \"note\": \"Restocking warehouse\",\r\n  \"date\": \"2024-11-22T14:00:00Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCAL}}/logs",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"logs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
