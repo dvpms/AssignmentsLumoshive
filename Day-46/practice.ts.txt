@@ -1,0 +1,138 @@
+// Deklarasi Variabel
+const username: string = "Alice";
+const age: number = 25;
+const isAdmin: boolean = true;
+const colors: string[] = ["red", "green", "blue"];
+
+// Fungsi Multiply
+function multiply(a: number, b: number): number {
+    return a * b;
+}
+
+// Interface Car
+interface Car {
+    brand: string;
+    model: string;
+    year: number;
+}
+
+const myCar: Car = {
+    brand: "Toyota",
+    model: "Corolla",
+    year: 2020
+};
+
+// Union Type
+let userId: string | number = "123";
+
+// Class Animal
+class Animal {
+    name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    makeSound(): void {
+        console.log("Some generic sound");
+    }
+}
+
+const genericAnimal = new Animal("Generic");
+
+// Class Dog
+class Dog extends Animal {
+    makeSound(): void {
+        console.log("Woof!");
+    }
+}
+
+// Fungsi Generic
+function identity<T>(arg: T): T {
+    return arg;
+}
+
+// Type Alias Point
+type Point = {
+    x: number;
+    y: number;
+};
+
+const pointA: Point = { x: 10, y: 20 };
+
+// Class BankAccount
+class BankAccount {
+    private balance: number;
+
+    constructor(initialBalance: number) {
+        this.balance = initialBalance;
+    }
+
+    deposit(amount: number): void {
+        this.balance += amount;
+    }
+
+    getBalance(): number {
+        return this.balance;
+    }
+}
+
+// Interface User
+interface User {
+    readonly id: number;
+    name: string;
+}
+
+const user: User = {
+    id: 1,
+    name: "Alice"
+};
+
+// Partial Profile
+interface Profile {
+    name: string;
+    age: number;
+}
+
+const profileUpdate: Partial<Profile> = {};
+
+// Enum Role
+enum Role {
+    Admin,
+    User,
+    Guest
+}
+
+const currentRole: Role = Role.User;
+
+// Intersection Type
+type Employee = {
+    id: number;
+    department: string;
+};
+
+type Manager = {
+    level: string;
+};
+
+type ManagerEmployee = Employee & Manager;
+
+const manager: ManagerEmployee = {
+    id: 1,
+    department: "Sales",
+    level: "Senior"
+};
+
+// Optional Chaining
+const person = {
+    address: {
+        city: "New York"
+    }
+};
+
+console.log(person.address?.city);
+
+// Fungsi Calculate Discount
+function calculateDiscount(price: number, discount: number = 10): number {
+    return price - (price * discount) / 100;
+}
